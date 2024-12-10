@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/* Định dạng chung */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Màu nền nhẹ */
+}
+.Logo {
+    width: 100px;  /* Đặt kích thước của logo */
+    height: 100px; /* Đảm bảo chiều cao và chiều rộng bằng nhau */
+    border-radius: 50%; /* Tạo góc bo tròn, chuyển hình vuông thành hình tròn */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+
+header {
+    border-bottom: 1px solid #ddd; /* Đường kẻ dưới header */
+}
+
+header {
+    background: url('3011/images/header-bg.jpg') no-repeat center center;
+ /* Đường dẫn đến ảnh nền */
+    background-size: cover; /* Tự động căn chỉnh ảnh vừa khít với header */
+    color: #0000a0; /* Đảm bảo chữ màu trắng để nổi bật */
+    padding: 10px 0; /* Khoảng cách trên dưới nội dung */
+}
+/* Header */
+header {
+    background: url('../images/header-bg.jpg') no-repeat center center, #f00; /* Đỏ là dự phòng */
+    background-size: cover;
+}
+
+header .d-flex {
+    gap: 10px; /* Khoảng cách giữa logo và chữ */
+}
+
+header h6, header h5 {
+    margin: 0; /* Loại bỏ khoảng cách mặc định */
+}
+
+header h6 {
+    font-size: 16px; /* Kích thước chữ nhỏ hơn */
+    color: #555; /* Màu chữ trung tính */
+    font-weight: bold;
+}
+
+header h5 {
+    font-size: 20px; /* Kích thước chữ lớn hơn */
+    color: #000; /* Màu chữ đen */
+    font-weight: bold;
+}
+
+
+/* Thanh điều hướng */
+.navbar {
+    background-color: #0056b3; /* Nền xanh đậm */
+    border-bottom: 3px solid #ffcc00; /* Đường viền vàng ở dưới */
+}
+
+.navbar .nav-link {
+    color: white !important; /* Chữ màu trắng */
+    font-weight: bold; /* Chữ đậm */
+}
+.navbar-brand{
+    color: white !important;	
+    font-weight: bold;
+    z-index: 1000; /* Đảm bảo phần tử này hiển thị trên các phần tử khác */
+    position: relative; /* Cần thiết để z-index có hiệu lực */
+}
+.navbar .nav-brand:hover {
+	color: #ffff00!important;
+}
+.navbar .nav-link:hover {
+    color: #ffcc00 !important; /* Màu chữ khi hover */
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Tiêu đề chính */
+main h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007bff !important; /* Màu đỏ */
+    margin-bottom: 20px;
+}
+
+main h3 {
+    font-size: 22px;
+    color: #007bff; /* Màu xanh lam */
+    margin-bottom: 20px;
+}
+
+/* Hình ảnh và nội dung */
+main img {
+    border-radius: 8px; /* Góc bo tròn cho ảnh */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+main .bg-light {
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main button {
+    font-size: 14px;
+    font-weight: bold;
+}
+.navbar .nav-item {
+    margin-right: 15px; /* Khoảng cách giữa các mục trong thanh điều hướng */
+}
+.dropdown-item:hover {
+    background-color: #ffcc00; /* Màu nền khi hover */
+    color: white; /* Màu chữ khi hover */
+}
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 24px; /* Giảm kích thước h1 trên màn hình nhỏ */
+    }
+    main h3 {
+        font-size: 20px; /* Giảm kích thước h3 trên màn hình nhỏ */
+    }
+}
+main {
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .navbar-nav {
+        font-size: 14px; /* Giảm kích thước chữ trên thanh điều hướng khi thu nhỏ */
+    }
+}
+main .container mt-4{
+	font-size:10px;
+	color: #007bff;
+}
+
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+}
+.lecturer-container {
+    display: flex;
+    flex-wrap: wrap; /* Để xuống dòng khi hết không gian */
+    justify-content: center; /* Căn giữa các card */
+    gap: 20px; /* Khoảng cách giữa các card */
+    padding: 20px;
+}
+
+.lecturer-card {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lecturer-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Hiển thị ảnh tròn */
+    object-fit: cover; /* Giữ tỷ lệ ảnh */
+    margin-bottom: 10px;
+}
+
+.lecturer-card h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.lecturer-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.lecturer-card a {
+    text-decoration: none;
+    color: #007bff; /* Màu xanh cho email */
+}
+.lecturer-row{
+	display: flex;
+    flex-wrap: wrap; /* Để xuống dòng khi hết không gian */
+    justify-content: center; /* Căn giữa các card */
+    gap: 20px; /* Khoảng cách giữa các card */
+    padding: 20px;
+}

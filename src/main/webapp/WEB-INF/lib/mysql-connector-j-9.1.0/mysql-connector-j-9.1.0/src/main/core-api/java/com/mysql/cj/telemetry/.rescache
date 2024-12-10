@@ -1,0 +1,1 @@
+{"__version__":1,"totalSize":21707,"count":8,"data":{"NoopTelemetryHandler.java":[0,1922],"NoopTelemetryScope.java":[0,1758],"NoopTelemetrySpan.java":[0,1863],"TelemetryAttribute.java":[0,3446],"TelemetryHandler.java":[0,4021],"TelemetryScope.java":[0,1983],"TelemetrySpan.java":[0,3259],"TelemetrySpanName.java":[0,3455]}}
