@@ -105,19 +105,16 @@ public class ltrDao {
 	}
 	public static boolean deleteLecturer(int id) {
 	    String query = "DELETE FROM Lecturer WHERE id = ?";
-	    
 	    try (Connection connection = dataConnection.getConnection();
-	         PreparedStatement statement = connection.prepareStatement(query)) {
-	        
-	        statement.setInt(1, id);
-	        
-	        int rowsDeleted = statement.executeUpdate();
-	        return rowsDeleted > 0;
+	         PreparedStatement ps = connection.prepareStatement(query)) {
+	        ps.setInt(1, id);
+	        return ps.executeUpdate() > 0;
 	    } catch (SQLException e) {
 	        e.printStackTrace();
 	    }
 	    return false;
 	}
+
 	public static boolean addLecturer(lecturer lec) {
 	    String query = "INSERT INTO Lecturer (ten, chucDanh, email, boMon, urlImage) VALUES (?, ?, ?, ?, ?)";
 	    boolean success = false;

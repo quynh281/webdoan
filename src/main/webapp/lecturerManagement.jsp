@@ -60,8 +60,8 @@
                             <td>${lecturer.boMon}</td>
                             <td>${lecturer.urlImage}</td>
                             <td>
-                                <a href="lecturerController?action=edit&id=${lecturer.id}" class="btn btn-warning btn-sm">Sửa</a>
-                                <a href="lecturerController?action=delete&id=${lecturer.id}" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa giảng viên này?');">Xóa</a>
+                                <a href="ltrController?action=edit&id=${lecturer.id}" class="btn btn-warning btn-sm">Sửa</a>
+                                <a href="ltrController?action=delete&id=${lecturer.id}" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa giảng viên này?');">Xóa</a>
                             </td>
                         </tr>
                     </c:forEach>
@@ -73,7 +73,8 @@
         <div class="card">
             <div class="card-header bg-primary text-white">Thêm giảng viên mới</div>
             <div class="card-body">
-                <form action="lecturerController?action=add" method="post">
+                <form action="ltrController" method="post">
+                     <input type="hidden" name="action" value="add">
                     <div class="form-group">
                         <label for="name">Họ tên:</label>
                         <input type="text" class="form-control" id="ten" name="ten" required>

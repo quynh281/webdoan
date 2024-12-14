@@ -54,7 +54,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Quản lý Giảng viên</h5>
                         <p class="card-text">Xem danh sách, thêm, sửa hoặc xóa giảng viên.</p>
-                        <a href="lecturerManagement.jsp" class="btn btn-light">Xem chi tiết</a>
+                        <a href="ltrController?action=list" class="btn btn-light">Xem chi tiết</a>
                     </div>
                 </div>
             </div>
